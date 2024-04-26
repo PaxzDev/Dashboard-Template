@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Paxz Dashboard Template Serverside - #1 Serverside</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://kit.fontawesome.com/0e4e59a89f.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+  </head>
+  <body>
+    <div class="container-fluid">
+        <div class="row">
+          <nav class="col-md-3 col-lg-2 d-md-block bg-light sidebar">
+            <div class="sidebar-sticky">
+              <h2 class="title">Paxz Dashboard Template <span class="blue">serverside</span></h2>
+              <hr>
+              <ul class="nav flex-column">
+                <li class="nav-item">
+                  <span class="category">Home</span>
+                  <a class="nav-link" href="index.html"><i class="fa-solid fa-house"></i>
+                    Dashboard</a>
+                </li>
+                <hr>
+                <li class="nav-item">
+                  <span class="category">Execution And Scripts</span>
+                  <a class="nav-link" href="executor.html"><i class="fa-solid fa-paper-plane"></i>
+                    Executor</a>
+                  <a class="nav-link" href="scripthub.html"><i class="fa-solid fa-folder"></i>
+                    Script Hub</a>
+                  <a class="nav-link" href="addscripts.html"><i class="fa-regular fa-folder-open"></i>
+                    Add public scripts</a>
+                </li>
+                <hr>
+                <li class="nav-item">
+                  <span class="category">Settings</span>
+                  <a class="nav-link" href="dbsettings.html"><i class="fa-solid fa-gears"></i>
+                    Dashboard Settings</a>
+                  <a class="nav-link active" href="exesettings.html"><i class="fa-solid fa-sliders"></i>
+                     Execution Settings</a>
+                </li>
+                <hr>
+                <li class="nav-item">
+                    <span class="category">Account</span>
+                    <a class="nav-link" href="invoices.html"><i class="fa-regular fa-credit-card"></i>
+                      Invoices</a>
+                    <a class="nav-link" href="#"><i class="fa-regular fa-circle-user"></i>
+                      Roblox Username</a>
+                      <a class="nav-link" href="#"><i class="fa-solid fa-right-from-bracket"></i>
+                        Logout</a>
+                  </li>
+              </ul>
+            </div>
+          </nav>
+
+          <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+            <div style="margin: 15px;">
+              <h1>Execution Settings</h1>
+              <p class="mute">Configure your executor experience.</p>
+              <a class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#UsernameModal" data-bs-whatever="username" id="manage-roblox-account"><i class="fa-solid fa-pen-to-square"></i> Manage Roblox Account</a>
+              <a class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#KeyModal" data-bs-whatever="key" id="redeem-modal"><i class="fa-solid fa-bolt"></i> Redeem Key</a>
+              <a class="btn btn-dark"><i class="fa-regular fa-credit-card"></i> Upgrade Plan</a>
+            </div>
+            <hr>
+          
+            <div class="row row-cols-1 row-cols-md-3 g-4">
+              <div class="col">
+                <div class="card">
+                  <div class="card-body">
+                    <h5 class="card-title"><i class="fa-solid fa-font"></i>
+                        Change Font</h5>
+                    <p class="card-text">Enable a custom font in the executor</p>
+                    <a href="#" class="btn btn-dark">Enable</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card">
+                  <div class="card-body">
+                    <h5 class="card-title"><i class="fa-solid fa-eye-slash"></i>
+                        Hide code</h5>
+                    <p class="card-text">This will hide all of the code in the executor.</p>
+                    <a href="#" class="btn btn-dark">Enable</a>
+                  </div>
+                </div>
+              </div>
+          
+              <div class="col">
+                <div class="card">
+                  <div class="card-body">
+                    <h5 class="card-title"><i class="fa-solid fa-code"></i>
+                        Queue Scripts</h5>
+                    <p class="card-text">Enable script queue'ing which will make it so that all scripts executed will be put into a queue.</p>
+                    <a href="#" class="btn btn-dark">Enable</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </main>
+          
+          
+
+<div class="modal fade" id="UsernameModal" tabindex="-1" aria-labelledby="UsernameModal" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Manage Roblox Account</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="mb-3">
+            <label for="recipient-name" class="col-form-label">Roblox Username:</label>
+            <input type="text" class="form-control" id="recipient-name" placeholder="Insert Roblox Username Here">
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Cancel</button>
+        <button type="button" class="btn btn-dark">Set Account Username</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="KeyModal" tabindex="-1" aria-labelledby="KeyModal" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Redeem Key</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="mb-3">
+            <label for="recipient-name" class="col-form-label">Redeem key:</label>
+            <input type="text" class="form-control" id="recipient-name" placeholder="Insert Key Here">
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Cancel</button>
+        <button type="button" class="btn btn-dark">Set Account Username</button>
+      </div>
+    </div>
+  </div>
+</div>
+          
+          
+
+
+
+
+
+    <script src="https://kit.fontawesome.com/0e4e59a89f.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha384-HaIBKhoPzHvJ+xm3nO5Dn6b1AWpDxhLj/nmIVaD+N2aQ2IVQO38dXf4gZXm0m0ew" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+  </body>
+</html>
